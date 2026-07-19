@@ -1,0 +1,121 @@
+.hero {
+  position: relative;
+  height: 80vh;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-top: calc(var(--header-height) * -1); /* Pull up under header */
+}
+
+.heroImage {
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(0.85);
+}
+
+.heroContent {
+  text-align: center;
+  color: var(--bg-primary);
+  z-index: 10;
+  max-width: 600px;
+  padding: var(--spacing-lg);
+}
+
+.heroTitle {
+  font-size: clamp(2.8rem, 6vw, 5.5rem);
+  margin-bottom: var(--spacing-sm);
+  letter-spacing: -1px;
+  font-weight: 700;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+}
+
+.heroSubtitle {
+  font-size: 1rem;
+  font-family: var(--font-body);
+  margin-bottom: var(--spacing-lg);
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+.section {
+  padding: var(--spacing-xl) 0;
+  background-color: var(--bg-primary);
+}
+
+.sectionTitle {
+  text-align: center;
+  font-size: 0.85rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: var(--spacing-xl);
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.productCard {
+  background: var(--bg-primary);
+  border-radius: 0;
+  overflow: hidden;
+  transition: var(--transition);
+  border: none;
+}
+
+.productCard:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.productImageWrapper {
+  position: relative;
+  aspect-ratio: 4/5;
+  background: var(--cream);
+  overflow: hidden;
+}
+
+.productImage {
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.productCard:hover .productImage {
+  transform: scale(1.05);
+}
+
+.productInfo {
+  padding: var(--spacing-md);
+  text-align: center;
+}
+
+.productTitle {
+  font-size: 0.9rem;
+  margin-bottom: 0.4rem;
+  color: var(--text-primary);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.productPrice {
+  color: var(--text-secondary);
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 0.95rem;
+}
+
+.productColor {
+  font-size: 0.75rem;
+  color: #a07060;
+  font-family: var(--font-body);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  margin-bottom: 2px;
+}
